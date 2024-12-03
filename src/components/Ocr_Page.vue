@@ -1,5 +1,6 @@
 <template>
-  <div class="bg-gray-100 font-sans">
+  <div  class="bg-gray-100 font-sans w-full h-screen overflow-hidden">
+    
     <!-- Header -->
     <header
       class="bg-red-800 text-white p-4 flex items-center fixed top-0 w-full z-10"
