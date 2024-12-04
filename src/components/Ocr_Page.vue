@@ -84,12 +84,23 @@
     <div class="relative z-10 text-center mt-8">
       <button
         class="bg-red-800 text-white px-6 py-2 rounded-full text-lg hover:bg-red-600 focus:outline-none"
-      >
+         @click="goToChatPage"
+        >
         เริ่มต้นใช้งาน
       </button>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    goToChatPage() {
+      this.$router.push('/Chat_Page'); // ใช้ Vue Router ในการเปลี่ยนหน้า
+    },
+  },
+};
+</script>
 
 <style>
 html,

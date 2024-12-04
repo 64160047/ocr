@@ -1,5 +1,6 @@
 <template>
-  <Ocr_Page/>
+  
+  <router-view/>
   
 </template>
 
