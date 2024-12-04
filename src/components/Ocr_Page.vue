@@ -24,9 +24,9 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-16">
         <!-- Card 1 -->
         <div
-          class="bg-stone-100 drop-shadow-md transform transition duration-300 hover:scale-105 hover:bg-gray-100 hover:drop-shadow-xl rounded-lg overflow-hidden w-[280px] h-[430px] p-4"
+          class="card-container bg-stone-100 drop-shadow-md transform transition duration-300 hover:scale-105 hover:bg-gray-100 hover:drop-shadow-xl rounded-lg overflow-hidden w-[280px] h-[430px] p-4"
         >
-          <div class="pt-3">
+          <div class="pt-3 mb-2">
             <h3 class="text-center text-md font-semibold">เอกสารใบเสร็จ</h3>
           </div>
           <img
@@ -38,9 +38,9 @@
 
         <!-- Card 2 -->
         <div
-          class="bg-stone-100 drop-shadow-md transform transition duration-300 hover:scale-105 hover:bg-gray-100 hover:drop-shadow-xl rounded-lg overflow-hidden w-[280px] h-[430px] p-4"
+          class="card-container bg-stone-100 drop-shadow-md transform transition duration-300 hover:scale-105 hover:bg-gray-100 hover:drop-shadow-xl rounded-lg overflow-hidden w-[280px] h-[430px] p-4"
         >
-          <div class="pt-3">
+          <div class="pt-3 mb-2">
             <h3 class="text-center text-md font-semibold">เอกสารราชการ</h3>
           </div>
           <img
@@ -52,9 +52,9 @@
 
         <!-- Card 3 -->
         <div
-          class="bg-stone-100 drop-shadow-md transform transition duration-300 hover:scale-105 hover:bg-gray-100 hover:drop-shadow-xl rounded-lg overflow-hidden w-[280px] h-[430px] p-4"
+          class="card-container bg-stone-100 drop-shadow-md transform transition duration-300 hover:scale-105 hover:bg-gray-100 hover:drop-shadow-xl rounded-lg overflow-hidden w-[280px] h-[430px] p-4"
         >
-          <div class="pt-3">
+          <div class="pt-3 mb-2">
             <h3 class="text-center text-md font-semibold">นิทานและนวนิยาย</h3>
           </div>
           <img
@@ -66,9 +66,9 @@
 
         <!-- Card 4 -->
         <div
-          class="bg-stone-100 drop-shadow-md transform transition duration-300 hover:scale-105 hover:bg-gray-100 hover:drop-shadow-xl rounded-lg overflow-hidden w-[280px] h-[430px] p-4"
+          class="card-container bg-stone-100 drop-shadow-md transform transition duration-300 hover:scale-105 hover:bg-gray-100 hover:drop-shadow-xl rounded-lg overflow-hidden w-[280px] h-[430px] p-4"
         >
-          <div class="pt-3">
+          <div class="pt-3 mb-2">
             <h3 class="text-center text-md font-semibold">ป้ายแนะนำ</h3>
           </div>
           <img
@@ -102,7 +102,7 @@ export default {
 };
 </script>
 
-<style>
+<style >
 html,
 body {
   margin: 0;
@@ -139,5 +139,9 @@ body {
   left: 0;
   width: 100%;
   min-height: 100%;
+},
+.card-container:hover {
+  cursor: pointer; /* เพิ่ม pointer */
+  
 }
 </style>
