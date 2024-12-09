@@ -25,6 +25,7 @@
         <!-- Card 1 -->
         <div
           class="card-container bg-stone-100 drop-shadow-md transform transition duration-300 hover:scale-105 hover:bg-gray-100 hover:drop-shadow-xl rounded-lg overflow-hidden w-[280px] h-[430px] p-4"
+          @click="selectImage('https://via.placeholder.com/150')"
         >
           <div class="pt-3 mb-2">
             <h3 class="text-center text-md font-semibold">เอกสารใบเสร็จ</h3>
@@ -39,6 +40,7 @@
         <!-- Card 2 -->
         <div
           class="card-container bg-stone-100 drop-shadow-md transform transition duration-300 hover:scale-105 hover:bg-gray-100 hover:drop-shadow-xl rounded-lg overflow-hidden w-[280px] h-[430px] p-4"
+          @click="selectImage('https://via.placeholder.com/200')"
         >
           <div class="pt-3 mb-2">
             <h3 class="text-center text-md font-semibold">เอกสารราชการ</h3>
@@ -53,6 +55,7 @@
         <!-- Card 3 -->
         <div
           class="card-container bg-stone-100 drop-shadow-md transform transition duration-300 hover:scale-105 hover:bg-gray-100 hover:drop-shadow-xl rounded-lg overflow-hidden w-[280px] h-[430px] p-4"
+          @click="selectImage('https://via.placeholder.com/250')"
         >
           <div class="pt-3 mb-2">
             <h3 class="text-center text-md font-semibold">นิทานและนวนิยาย</h3>
@@ -67,6 +70,7 @@
         <!-- Card 4 -->
         <div
           class="card-container bg-stone-100 drop-shadow-md transform transition duration-300 hover:scale-105 hover:bg-gray-100 hover:drop-shadow-xl rounded-lg overflow-hidden w-[280px] h-[430px] p-4"
+          @click="selectImage('https://via.placeholder.com/350')"
         >
           <div class="pt-3 mb-2">
             <h3 class="text-center text-md font-semibold">ป้ายแนะนำ</h3>
@@ -84,8 +88,8 @@
     <div class="relative z-10 text-center mt-8">
       <button
         class="bg-red-800 text-white px-6 py-2 rounded-full text-lg hover:bg-red-600 focus:outline-none"
-         @click="goToChatPage"
-        >
+        @click="goToChatPage"
+      >
         เริ่มต้นใช้งาน
       </button>
     </div>
@@ -94,15 +98,21 @@
 
 <script>
 export default {
+  name: "OcrPage",
   methods: {
     goToChatPage() {
-      this.$router.push('/Chat_Page'); // ใช้ Vue Router ในการเปลี่ยนหน้า
+      this.$router.push('/Chat_Page'); // ไปยัง Chat Page
+    },
+    selectImage(image) {
+      // ส่งข้อมูลรูปไปยัง Chat_Page พร้อม query parameter
+      this.$router.push({ path: "/Chat_Page", query: { image } });
     },
   },
 };
 </script>
 
-<style >
+<style>
+/* CSS เดิม */
 html,
 body {
   margin: 0;
@@ -111,7 +121,6 @@ body {
   overflow: hidden;
 }
 
-/* Background Gradient Animation */
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -125,12 +134,7 @@ body {
 }
 
 .animate-gradient {
-  background: linear-gradient(
-    270deg,
-    #EFD8E7,
-    #F3E6DD,
-    #C1DFF9
-  );
+  background: linear-gradient(270deg, #efd8e7, #f3e6dd, #c1dff9);
   background-size: 400% 1000%;
   animation: gradient 10s ease infinite;
   z-index: -1;
@@ -139,9 +143,9 @@ body {
   left: 0;
   width: 100%;
   min-height: 100%;
-},
+}
+
 .card-container:hover {
-  cursor: pointer; /* เพิ่ม pointer */
-  
+  cursor: pointer;
 }
 </style>
