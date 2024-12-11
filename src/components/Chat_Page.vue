@@ -140,18 +140,19 @@ export default {
 <style>
 @media (max-width: 768px) {
   .styled-image {
-    max-width: 95%; /* ปรับขนาดให้เล็กลงเล็กน้อยในอุปกรณ์ขนาดเล็ก */
+    max-width: 90%; /* ปรับขนาดให้เล็กลงเล็กน้อยในอุปกรณ์ขนาดเล็ก */
     margin: 20px auto; /* ระยะห่างมากขึ้นสำหรับการจัดกึ่งกลาง */
   }
 }
 
 .styled-image {
-  max-width: 98%; /* ขยายขนาดภาพให้ใหญ่ขึ้นเล็กน้อย */
+  max-width: 90%; /* ขยายขนาดภาพให้ใหญ่ขึ้นเล็กน้อย */
   height: auto; /* รักษาอัตราส่วนของภาพ */
   padding: 10px; /* ระยะห่างจากขอบ container */
   display: block; /* ภาพจัดกึ่งกลาง */
   margin: 10px auto; /* จัดกึ่งกลางแนวนอน พร้อมปรับระยะห่างจากบนล่าง */
   border-radius: 10px; /* ขอบโค้งมน */
+  object-fit: cover;
   
  
 }
